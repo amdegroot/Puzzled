@@ -16,12 +16,24 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         
-        // Get label node from scene and store it for use later
-        self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
-        if let label = self.label {
-            label.alpha = 0.0
-            label.run(SKAction.fadeIn(withDuration: 2.0))
-        }
+        // Create FadeinFadeOutSequence
+        let FIFO = SKAction.sequence([SKAction.fadeIn(withDuration: 2.0), SKAction.wait(forDuration: 3.0), SKAction.fadeOut(withDuration: 2.0)])
+        
+        let Title = SKLabelNode(fontNamed:UIFont.systemFont(ofSize: 100, weight: UIFontWeightUltraLight).fontName)
+        
+        Title.text = "Puzzled";
+        Title.alpha = 0; Title.fontSize = 100;
+        self.addChild(Title);
+        Title.run(FIFO)
+        
+        
+//        // Get label node from scene and store it for use later
+//        self.label = self.childNode(withName: "//titleLabel") as? SKLabelNode
+//        if let label = self.label {
+//            label.alpha = 0.0
+//            //label.run(SKAction.fadeIn(withDuration: 2.0))
+//            label.run(FIFO)
+//        }
         
         // Create shape node to use during mouse interaction
         let w = (self.size.width + self.size.height) * 0.05
