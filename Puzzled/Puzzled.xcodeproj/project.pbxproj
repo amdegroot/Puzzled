@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D62F2BC61DBFFC5F00E797AF /* Level0.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62F2BC51DBFFC5F00E797AF /* Level0.swift */; };
 		D6BABFBF1DAD5D2F005565B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BABFBE1DAD5D2F005565B4 /* AppDelegate.swift */; };
 		D6BABFC11DAD5D2F005565B4 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6BABFC01DAD5D2F005565B4 /* GameScene.sks */; };
 		D6BABFC31DAD5D2F005565B4 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = D6BABFC21DAD5D2F005565B4 /* Actions.sks */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D62F2BC51DBFFC5F00E797AF /* Level0.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level0.swift; sourceTree = "<group>"; };
 		D6BABFBB1DAD5D2F005565B4 /* Puzzled.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Puzzled.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BABFBE1DAD5D2F005565B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6BABFC01DAD5D2F005565B4 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				D6BABFC01DAD5D2F005565B4 /* GameScene.sks */,
 				D6BABFC21DAD5D2F005565B4 /* Actions.sks */,
 				D6BABFC41DAD5D2F005565B4 /* GameScene.swift */,
+				D62F2BC51DBFFC5F00E797AF /* Level0.swift */,
 				D6BABFC61DAD5D2F005565B4 /* GameViewController.swift */,
 				D6BABFC81DAD5D2F005565B4 /* Main.storyboard */,
 				D6BABFCB1DAD5D2F005565B4 /* Assets.xcassets */,
@@ -276,6 +279,7 @@
 				D6BABFC51DAD5D2F005565B4 /* GameScene.swift in Sources */,
 				D6BABFC71DAD5D2F005565B4 /* GameViewController.swift in Sources */,
 				D6BABFBF1DAD5D2F005565B4 /* AppDelegate.swift in Sources */,
+				D62F2BC61DBFFC5F00E797AF /* Level0.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +530,7 @@
 				D6BABFEB1DAD5D30005565B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D6BABFEC1DAD5D30005565B4 /* Build configuration list for PBXNativeTarget "PuzzledTests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +539,7 @@
 				D6BABFEE1DAD5D30005565B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D6BABFEF1DAD5D30005565B4 /* Build configuration list for PBXNativeTarget "PuzzledUITests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +548,7 @@
 				D6BABFF11DAD5D30005565B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

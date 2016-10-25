@@ -17,14 +17,30 @@ class GameScene: SKScene {
     override func didMove(to view: SKView) {
         
         // Create FadeinFadeOutSequence
-        let FIFO = SKAction.sequence([SKAction.fadeIn(withDuration: 2.0), SKAction.wait(forDuration: 3.0), SKAction.fadeOut(withDuration: 2.0)])
+        let FIFO = SKAction.sequence([SKAction.fadeIn(withDuration: 2.0), SKAction.wait(forDuration: 2.0), SKAction.fadeOut(withDuration: 1.0)])
+        let fadeIn = SKAction.fadeIn(withDuration: 1.5)
         
-        let Title = SKLabelNode(fontNamed:UIFont.systemFont(ofSize: 100, weight: UIFontWeightUltraLight).fontName)
+        //let Title = SKLabelNode(fontNamed:UIFont.systemFont(ofSize: 100, weight: UIFontWeightUltraLight).fontName)
+        let Title = SKLabelNode(fontNamed:"Avenir-Light")
+        let Play = SKLabelNode(fontNamed:"Avenir-Light")
+        let Levels = SKLabelNode(fontNamed:"Avenir-Light")
+        let HighScores = SKLabelNode(fontNamed:"Avenir-Light")
         
-        Title.text = "Puzzled";
-        Title.alpha = 0; Title.fontSize = 100;
+        Title.text = "Puzzled"; Play.text = "PLAY"; Levels.text = "Levels"; HighScores.text = "High\nScores";
+        Title.alpha = 0; Title.fontSize = 100; Play.alpha = 0; Play.fontSize = 200;
+        Play.position = CGPoint(x:self.frame.midX, y:(self.frame.midY)+90)
+        Levels.position = CGPoint(x:self.frame.midX, y:self.frame.midY - 150)
+        HighScores.position = CGPoint(x:self.frame.midX, y:self.frame.midY - 300)
+        Levels.alpha = 0; Levels.fontSize = 60; HighScores.alpha = 0; HighScores.fontSize = 60;
         self.addChild(Title);
         Title.run(FIFO)
+        
+        delay(5.2) {
+            self.addChild(Play); self.addChild(HighScores); self.addChild(Levels);
+            Play.run(fadeIn); Levels.run(fadeIn); HighScores.run(fadeIn)
+            
+        }
+
         
         
 //        // Get label node from scene and store it for use later
@@ -98,4 +114,11 @@ class GameScene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
     }
+    
+}
+
+//SIMPLE DELAY FUNCTION
+func delay(_ delay:Double, closure:@escaping ()->()) {
+    let when = DispatchTime.now() + delay
+    DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
 }
