@@ -11,6 +11,11 @@ import GameplayKit
 
 class GameScene: SKScene {
     
+    let Play = SKLabelNode(fontNamed:"Avenir-Light")
+    let Levels = SKLabelNode(fontNamed:"Avenir-Light")
+    let HighScores = SKLabelNode(fontNamed:"Avenir-Light")
+    let defaults = UserDefaults.standard
+    
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
     
@@ -22,9 +27,6 @@ class GameScene: SKScene {
         
         //let Title = SKLabelNode(fontNamed:UIFont.systemFont(ofSize: 100, weight: UIFontWeightUltraLight).fontName)
         let Title = SKLabelNode(fontNamed:"Avenir-Light")
-        let Play = SKLabelNode(fontNamed:"Avenir-Light")
-        let Levels = SKLabelNode(fontNamed:"Avenir-Light")
-        let HighScores = SKLabelNode(fontNamed:"Avenir-Light")
         
         Title.text = "Puzzled"; Play.text = "PLAY"; Levels.text = "Levels"; HighScores.text = "High\nScores";
         Title.alpha = 0; Title.fontSize = 100; Play.alpha = 0; Play.fontSize = 200;
@@ -36,8 +38,8 @@ class GameScene: SKScene {
         Title.run(FIFO)
         
         delay(5.2) {
-            self.addChild(Play); self.addChild(HighScores); self.addChild(Levels);
-            Play.run(fadeIn); Levels.run(fadeIn); HighScores.run(fadeIn)
+            self.addChild(self.Play); self.addChild(self.HighScores); self.addChild(self.Levels);
+            self.Play.run(fadeIn); self.Levels.run(fadeIn); self.HighScores.run(fadeIn)
             
         }
 
@@ -95,7 +97,24 @@ class GameScene: SKScene {
             label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
         }
         
-        for t in touches { self.touchDown(atPoint: t.location(in: self)) }
+        for t in touches {
+            let pos = t.location(in: self)
+            let node = self.atPoint(pos)
+            if node == Play {
+                
+                //var level = defaults.integer(forKey: "CurrentLevel");
+                
+                if let view = view {
+                    let scene = Level0(fileNamed:"Level0")
+                    scene?.scaleMode = SKSceneScaleMode.aspectFill
+                    view.presentScene(scene!, transition: SKTransition.crossFade(withDuration: 0.3))
+                }
+            }
+        
+            self.touchDown(atPoint: t.location(in: self))
+            
+            
+        }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {

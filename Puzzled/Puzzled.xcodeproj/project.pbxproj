@@ -18,6 +18,7 @@
 		D6BABFCF1DAD5D2F005565B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6BABFCD1DAD5D2F005565B4 /* LaunchScreen.storyboard */; };
 		D6BABFDA1DAD5D2F005565B4 /* PuzzledTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BABFD91DAD5D2F005565B4 /* PuzzledTests.swift */; };
 		D6BABFE51DAD5D30005565B4 /* PuzzledUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BABFE41DAD5D30005565B4 /* PuzzledUITests.swift */; };
+		D6E570311DC00A0900AD1115 /* Level1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E570301DC00A0900AD1115 /* Level1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		D6BABFE01DAD5D30005565B4 /* PuzzledUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PuzzledUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BABFE41DAD5D30005565B4 /* PuzzledUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzledUITests.swift; sourceTree = "<group>"; };
 		D6BABFE61DAD5D30005565B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6E570301DC00A0900AD1115 /* Level1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				D6BABFC21DAD5D2F005565B4 /* Actions.sks */,
 				D6BABFC41DAD5D2F005565B4 /* GameScene.swift */,
 				D62F2BC51DBFFC5F00E797AF /* Level0.swift */,
+				D6E570301DC00A0900AD1115 /* Level1.swift */,
 				D6BABFC61DAD5D2F005565B4 /* GameViewController.swift */,
 				D6BABFC81DAD5D2F005565B4 /* Main.storyboard */,
 				D6BABFCB1DAD5D2F005565B4 /* Assets.xcassets */,
@@ -276,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6E570311DC00A0900AD1115 /* Level1.swift in Sources */,
 				D6BABFC51DAD5D2F005565B4 /* GameScene.swift in Sources */,
 				D6BABFC71DAD5D2F005565B4 /* GameViewController.swift in Sources */,
 				D6BABFBF1DAD5D2F005565B4 /* AppDelegate.swift in Sources */,
