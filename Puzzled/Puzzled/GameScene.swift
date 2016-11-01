@@ -105,9 +105,11 @@ class GameScene: SKScene {
                 //var level = defaults.integer(forKey: "CurrentLevel");
                 
                 if let view = view {
+                    let myDarkGray = UIColor(red:0.15, green:0.15, blue:0.15, alpha:1.0)
                     let scene = Level0(fileNamed:"Level0")
                     scene?.scaleMode = SKSceneScaleMode.aspectFill
-                    view.presentScene(scene!, transition: SKTransition.crossFade(withDuration: 0.3))
+                    view.presentScene(scene!, transition: SKTransition.fade(with: myDarkGray, duration: 0.4))
+                    //SKTransition.fade(with: myDarkGray, duration: 0.4)
                 }
             }
         
