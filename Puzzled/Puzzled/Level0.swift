@@ -21,14 +21,14 @@ class Level0: SKScene {
         let intro2 = SKLabelNode(fontNamed: "Avenir-Light")
         let intro3 = SKLabelNode(fontNamed: "Avenir-Light")
         intro1.text = "Welcome to Puzzled!"; intro1.alpha = 0; intro1.fontSize = 70;
-        intro2.text = "I will now present a series of puzzles."; intro2.alpha = 0; intro2.fontSize = 60;
-        intro3.text = "Tap the arrow button to continue."; intro3.alpha = 0; intro3.fontSize = 60;
+        intro2.text = "I will now present a series of puzzles."; intro2.alpha = 0; intro2.fontSize = 45;
+        intro3.text = "Tap the arrow button to continue."; intro3.alpha = 0; intro3.fontSize = 45;
         intro1.position = CGPoint(x:self.frame.midX, y:self.frame.midY + 400)
         intro2.position = CGPoint(x:self.frame.midX, y:self.frame.midY + 360)
         intro3.position = CGPoint(x:self.frame.midX, y:self.frame.midY + 320)
         
         nextButton.alpha = 0;
-        nextButton.position = CGPoint(x:self.frame.midX + 400, y:self.frame.midY - 550)
+        nextButton.position = CGPoint(x:self.frame.midX + 300, y:self.frame.midY - 550)
         
         
         //Creating actions
