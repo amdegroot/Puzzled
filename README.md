@@ -1,2 +1,2 @@
 # Puzzled
-A mobile app with fun brainteasers and puzzles.
+An iOS app with fun brainteasers and puzzles.
